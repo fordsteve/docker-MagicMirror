@@ -1,7 +1,7 @@
 name: Docker Image CI
 env:
 
-  IMAGE_NAME: magic_mirror
+  IMAGE_NAME: magic_mirror_server
 
 
 on:
