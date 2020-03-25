@@ -22,6 +22,7 @@ jobs:
 
     - name: Push image
       run: |
+        IMAGE_NAME="magic_mirror"
         IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
         
         # Change all uppercase to lowercase
@@ -38,5 +39,5 @@ jobs:
         echo IMAGE_ID=$IMAGE_ID
         echo VERSION=$VERSION
 
-        docker tag magic_mirror $IMAGE_ID:$VERSION
+        docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
         docker push $IMAGE_ID:$VERSION
